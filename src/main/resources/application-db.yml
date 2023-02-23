@@ -1,0 +1,61 @@
+# 数据库 配置信息
+
+# DATASOURCE
+spring:
+  datasource:
+    type: com.alibaba.druid.pool.DruidDataSource
+    max-active: 100
+    max-idle: 2
+    min-idle: 1
+    initial-size: 15
+
+    max-wait: 60000
+    time-between-eviction-runs-millis: 60000
+    min-evictableIdle-time-millis: 300000
+    test-while-idle: true
+    test-on-borrow: false
+    test-on-return: false
+    poolprepared-statements: true
+    max-pool-prepared-statement-per-connection-size: 20
+    filters: stat,log4j
+    connection-properties: druid.stat.mergeSql=true;druid.stat.slowSqlMillis=5000
+
+    url: jdbc:mysql://39.101.78.43:3306/eliauk-mini-testing?characterEncoding=utf8&autoReconnect=true&allowMultiQueries=true&useSSL=false
+    username: root
+    password: d#ygVq5m
+    driver-class-name: com.mysql.cj.jdbc.Driver
+
+  sql:
+    init:
+      platform: mysql
+  data:
+    redis:
+      database: 0
+      host: 192.168.2.185
+      port: 6379
+      password:
+      timeout: 5000ms
+      lettuce:
+        pool:
+          max-active: 8
+          max-idle: 8
+          max-wait: -1ms
+          min-idle: 0
+
+# mybatis 配置文件
+mybatis:
+  config-locations: classpath:mybatis-config.xml
+  mapper-locations: classpath:mapper/**/*.xml
+  type-aliases-package: com.zhjy.device.entity.domain.hardware
+  configuration:
+    mapUnderscoreToCamelCase: true
+
+#druid监控配置信息
+#IP白名单 (没有配置或者为空，则允许所有访问)
+druid:
+  allow:
+  #IP黑名单 (存在共同时，deny优先于allow)
+  deny:
+  login-username: admin
+  login-password: moadmin
+  reset-enable: false
