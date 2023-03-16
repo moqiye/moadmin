@@ -12,5 +12,4 @@ public class LoginController {
     public Result<String> login(){
         return Result.success();
     }
-
 }

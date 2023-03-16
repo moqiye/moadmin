@@ -20,9 +20,9 @@ spring:
     filters: stat,log4j
     connection-properties: druid.stat.mergeSql=true;druid.stat.slowSqlMillis=5000
 
-    url: jdbc:mysql://39.101.78.43:3306/eliauk-mini-testing?characterEncoding=utf8&autoReconnect=true&allowMultiQueries=true&useSSL=false
+    url: jdbc:mysql://localhost:3306/mo-admin?characterEncoding=utf8&autoReconnect=true&allowMultiQueries=true&useSSL=false
     username: root
-    password: d#ygVq5m
+    password: root
     driver-class-name: com.mysql.cj.jdbc.Driver
 
   sql:
@@ -31,7 +31,7 @@ spring:
   data:
     redis:
       database: 0
-      host: 192.168.2.185
+      host: localhost
       port: 6379
       password:
       timeout: 5000ms
