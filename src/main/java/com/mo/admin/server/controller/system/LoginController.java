@@ -1,6 +1,6 @@
-package com.mo.moadmin.controller.system;
+package com.mo.admin.server.controller.system;
 
-import com.mo.moadmin.dto.Result;
+import com.mo.admin.server.dto.Result;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
