@@ -57,5 +57,5 @@ druid:
   #IP黑名单 (存在共同时，deny优先于allow)
   deny:
   login-username: admin
-  login-password: moadmin
+  login-password: admin
   reset-enable: false

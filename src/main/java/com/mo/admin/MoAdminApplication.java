@@ -1,13 +1,13 @@
-package com.mo.admin.server;
+package com.mo.admin;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class MoAdminServerApplication {
+public class MoAdminApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(MoAdminServerApplication.class, args);
+		SpringApplication.run(MoAdminApplication.class, args);
 	}
 
 }
