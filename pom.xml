@@ -15,6 +15,7 @@
 	<description>mo admin server</description>
 	<properties>
 		<java.version>17</java.version>
+		<hutool.version>5.8.15</hutool.version>
 	</properties>
 	<dependencies>
 		<dependency>
@@ -25,7 +26,7 @@
 		<dependency>
 			<groupId>com.alibaba</groupId>
 			<artifactId>druid</artifactId>
-			<version>1.2.15</version>
+			<version>1.2.16</version>
 		</dependency>
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
@@ -45,6 +46,18 @@
 			<groupId>com.mysql</groupId>
 			<artifactId>mysql-connector-j</artifactId>
 			<scope>runtime</scope>
+		</dependency>
+		<!-- https://mvnrepository.com/artifact/cn.hutool/hutool-core -->
+		<dependency>
+			<groupId>cn.hutool</groupId>
+			<artifactId>hutool-core</artifactId>
+			<version>${hutool.version}</version>
+		</dependency>
+		<!-- https://mvnrepository.com/artifact/cn.hutool/hutool-jwt -->
+		<dependency>
+			<groupId>cn.hutool</groupId>
+			<artifactId>hutool-jwt</artifactId>
+			<version>${hutool.version}</version>
 		</dependency>
 		<dependency>
 			<groupId>org.projectlombok</groupId>
