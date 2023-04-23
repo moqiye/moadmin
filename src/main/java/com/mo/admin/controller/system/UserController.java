@@ -2,7 +2,7 @@ package com.mo.admin.controller.system;
 
 import com.mo.admin.dto.Result;
 import com.mo.admin.entity.User;
-import com.mo.admin.service.UserService;
+import com.mo.admin.service.system.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 

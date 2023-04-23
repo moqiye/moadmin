@@ -1,4 +1,4 @@
-package com.mo.admin.service;
+package com.mo.admin.service.system;
 
 import com.mo.admin.entity.User;
 import com.mo.admin.mapper.UserMapper;

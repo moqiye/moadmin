@@ -20,13 +20,15 @@ public class Result<T> {
         return Result.success(Result.MSG_OK, null);
     }
 
-    public static Result success(String msg){
-        return Result.success(msg, null);
+    public static Result success(Object data){
+        return Result.success(Result.MSG_OK, data);
     }
 
     public static Result success (String msg, Object data){
         return new Result(200, msg, data);
     }
+
+
 
 }
 

@@ -6,4 +6,4 @@ spring:
   application:
     name: mo-admin-server
   profiles:
-    active: db
+    active: db,weapp
