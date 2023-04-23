@@ -13,8 +13,7 @@ import java.io.Serializable;
 public class User implements Serializable {
     @Id
     @Column(name="id")
-    @GeneratedValue
-    private String id = UUID.fastUUID().toString();
+    private String id = UUID.randomUUID().toString(true);
     @Column(name="username")
     private String username;
     @Column(name="email")
