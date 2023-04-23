@@ -1,5 +1,6 @@
 package com.mo.admin.entity;
 
+import cn.hutool.core.lang.UUID;
 import jakarta.persistence.*;
 import lombok.Data;
 import org.hibernate.annotations.Table;
@@ -12,8 +13,8 @@ import java.io.Serializable;
 public class User implements Serializable {
     @Id
     @Column(name="id")
-    @GeneratedValue(strategy = GenerationType.UUID)
-    private String id;
+    @GeneratedValue
+    private String id = UUID.fastUUID().toString();
     @Column(name="username")
     private String username;
     @Column(name="email")
