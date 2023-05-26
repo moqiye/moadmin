@@ -66,6 +66,14 @@ public class RedisClient {
         }
     }
 
+    public boolean set(String key, String token, long expireSecond) {
+        this.set(key, token);
+        this.expire(key, expireSecond);
+        return true;
+    }
+
+
+
     /**
      * 普通缓存获取
      * @param key 键
@@ -119,5 +127,7 @@ public class RedisClient {
     public void hdel(String key, Object... item){
         redisTemplate.opsForHash().delete(key,item);
     }
+
+
 }
 

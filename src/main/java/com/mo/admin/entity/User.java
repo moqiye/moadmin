@@ -35,7 +35,6 @@ public class User implements Serializable {
     @Column(name="username")
     private String username;
 
-
     @Schema(
             description = "电子邮件"
     )
@@ -46,4 +45,7 @@ public class User implements Serializable {
 
     @Column(name="phone")
     private String phone;
+
+    @Column(name="password")
+    private String password;
 }

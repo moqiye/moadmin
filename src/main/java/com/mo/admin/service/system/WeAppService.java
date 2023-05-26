@@ -57,7 +57,6 @@ public class WeAppService {
         HttpClient client = HttpClient.newHttpClient();
         String accessToken = getAccessToken();
 
-
         URI uri = URI.create("https://api.weixin.qq.com/wxa/business/getuserphonenumber"
                 + "?access_token="
                 + accessToken + "&code="+code);
