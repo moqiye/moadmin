@@ -10,16 +10,20 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 @NoArgsConstructor
 public class Result<T> {
-    public static final Integer CODE_SUCCESS = 200;
+
+    public static final String CODE_SUCCESS = "200";
     private static final String MSG_OK = "操作成功";
-    public static final Integer CODE_ERROR = 500;
+
+    public static final String CODE_ERROR = "500";
     public static final String MSG_ERROR = "服务异常";
 
-    private Integer code;
+    // 没有访问权限，需要进行身份认证
+    public static final String CODE_UNAUTHORIZED = "401";
+    public static final String MSG_UNAUTHORIZED = "Token 验证失败";
+
+    private String code;
     private String msg;
     private T data;
-
-
 
     public static Result success(){
         return Result.success(Result.MSG_OK, null);
@@ -40,6 +44,5 @@ public class Result<T> {
     public static Result error(){
         return error(MSG_ERROR);
     }
-
 }
 

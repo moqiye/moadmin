@@ -4,6 +4,7 @@ import cn.hutool.core.bean.BeanUtil;
 import com.mo.admin.dto.Result;
 import com.mo.admin.dto.TokenInfo;
 import com.mo.admin.dto.system.login.LoginReqDTO;
+import com.mo.admin.dto.system.login.LoginResDTO;
 import com.mo.admin.entity.User;
 import com.mo.admin.repository.UserRepository;
 import com.mo.admin.utils.RedisClient;
@@ -41,7 +42,7 @@ public class LoginService {
         String token = TokenUtils.sign(info);
         String key = TokenUtils.TOKEN_KEY_PREFIX + user.getId();
         redisClient.set(key, token, EXPIRE_SECOND);
-        return Result.success(token);
+        return Result.success(LoginResDTO.builder().token(token).build());
     }
 
     /**
